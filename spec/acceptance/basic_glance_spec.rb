@@ -81,6 +81,8 @@ describe 'glance class' do
         disk_format      => 'qcow2',
         is_public        => 'yes',
         source           => 'http://download.cirros-cloud.net/0.3.1/cirros-0.3.1-x86_64-disk.img',
+	min_disk => 2,
+	min_ram => 2,
       }
       EOS
 
