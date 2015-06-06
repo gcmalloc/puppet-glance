@@ -45,6 +45,7 @@ Puppet::Type.type(:glance_image).provide(
   end
 
   def create
+    raise(Puppet::Error, "Must specify either source or location")
     if resource[:source]
       # copy_from cannot handle file://
       if resource[:source] =~ /^\// # local file
